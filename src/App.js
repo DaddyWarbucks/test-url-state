@@ -6,6 +6,7 @@ import './App.css';
 
 const preStyle = { background: '#fff', textAlign: 'left', color: '#000', padding: 10 }
 
+// https://github.com/alibaba/hooks/blob/master/packages/use-url-state/src/index.ts
 export const useUrlState = (initialState = {}, options = {}) => {
   const { navigateMode = 'push' } = options;
   const location = useLocation();
@@ -138,7 +139,7 @@ function App() {
       <header className="App-header">
         <h2>Url State fields</h2>
         <input value={urlText} onChange={handleUrlChange} />
-        <button onClick={handleUrlClick}>Boom! CLick me and then type again</button>
+        <button onClick={handleUrlClick}>Boom! Click me and then type again</button>
         <pre style={preStyle}>{JSON.stringify(urlState, null, 2)}</pre>
 
         <h2>Common State fields</h2>
